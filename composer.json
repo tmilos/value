@@ -1,0 +1,33 @@
+{
+    "name": "tmilos/value",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Milos Tomic",
+            "email": "tmilos@gmail.com",
+            "homepage": "https://github.com/tmilos/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Tmilos\\Value\\Tests\\": "tests/",
+            "Tmilos\\Value\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "satooshi/php-coveralls": "~0.6",
+        "ramsey/uuid": "^3.3",
+        "moontoast/math": "~1.1"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "stable"
+}

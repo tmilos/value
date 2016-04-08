@@ -1,0 +1,36 @@
+language: php
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+    - 5.5
+    - 5.6
+    - 7.0
+    - hhvm
+
+matrix:
+    fast_finish: true
+    allow_failures:
+        - php: hhvm
+    include:
+        - php: 5.5
+          env: COMPOSER_FLAGS="--prefer-lowest"
+
+before_install:
+    - composer self-update
+    - composer --version
+    - wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer.phar
+
+install:
+    - composer update $COMPOSER_FLAGS
+
+script:
+    - php php-cs-fixer.phar fix --dry-run -v
+    - bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+    - php bin/coveralls -v
