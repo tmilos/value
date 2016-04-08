@@ -2,6 +2,11 @@
 
 Abstract value and enum objects
 
+[![License](https://img.shields.io/packagist/l/tmilos/value.svg)](https://packagist.org/packages/tmilos/value)
+[![Build Status](https://travis-ci.org/tmilos/value.svg?branch=master)](https://travis-ci.org/tmilos/value)
+[![Coverage Status](https://coveralls.io/repos/github/tmilos/value/badge.svg?branch=master)](https://coveralls.io/github/tmilos/value?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tmilos/value/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tmilos/value/?branch=master)
+
 ## Value objects
 
 ```php
