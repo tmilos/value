@@ -51,7 +51,7 @@ var_dump(Gender::all());    // ['male' => Gender() => 'female' => Gender() ]
 var_dump(Gender::values()); // [ 0 => 'male', 1 => 'female' ]
 $m = Gender::MALE();
 print $m->getValue(); // male
-print $m->getTitle(); // female
+print $m->getTitle(); // gender.male
 var_dump(Gender::isValid('male')); // true
 var_dump(Gender::isValid('something')); // false
 ```
