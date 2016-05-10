@@ -28,9 +28,11 @@ abstract class AbstractEnum extends AbstractValue implements Enum
     {
         $result = [];
         foreach (self::getConstants() as $k => $v) {
-            /** @var Value $object */
-            $object = new static($v);
-            $result[$object->getValue()] = $object;
+            if (static::isValid($v)) {
+                /** @var Value $object */
+                $object = new static($v);
+                $result[$object->getValue()] = $object;
+            }
         }
 
         return $result;
