@@ -50,7 +50,7 @@ abstract class AbstractEnum extends AbstractValue implements Enum
 
     /**
      * Check if is valid enum value.
-     * 
+     *
      * @param $value
      *
      * @return bool
