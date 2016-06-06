@@ -27,7 +27,6 @@ class GenderTest extends \PHPUnit_Framework_TestCase
     public function test_values_method_return_array_of_values()
     {
         $values = Gender::values();
-        var_dump($values);
         $this->assertInternalType('array', $values);
         $this->assertEquals([Gender::MALE, Gender::FEMALE], $values);
     }
