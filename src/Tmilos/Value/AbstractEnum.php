@@ -57,7 +57,7 @@ abstract class AbstractEnum extends AbstractValue implements Enum
      */
     public static function isValid($value)
     {
-        return in_array($value, self::getConstants(), true);
+        return in_array($value, self::getConstants());
     }
 
     /**
