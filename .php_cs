@@ -1,9 +1,5 @@
 <?php
 
-$finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in('src')
-;
-
 $header = <<<EOT
 This file is part of the tmilos-value package.
 
@@ -15,9 +11,18 @@ EOT;
 
 Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
 
-return Symfony\CS\Config\Config::create()
+return PhpCsFixer\Config::create()
+    ->setRules([
+        '@Symfony' => true,
+        'header_comment' => true,
+        'simplified_null_return' => false,
+        'phpdoc_no_empty_return' => false,
+        'phpdoc_to_comment' => false,
+        'print_to_echo' => false,
+    ])
     ->setUsingCache(false)
-    ->level(Symfony\CS\FixerInterface::SYMFONY_LEVEL)
-    ->fixers(array('-empty_return', '-phpdoc_no_empty_return', 'header_comment'))
-    ->finder($finder)
+    ->finder(
+        PhpCsFixer\Finder::create()
+            ->in('src')
+    )
 ;
