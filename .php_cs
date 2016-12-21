@@ -1,5 +1,9 @@
 <?php
 
+$finder = PhpCsFixer\Finder::create()
+    ->in('src')
+;
+
 $header = <<<EOT
 This file is part of the tmilos-value package.
 
@@ -10,17 +14,13 @@ with this source code in the file LICENSE.
 EOT;
 
 return PhpCsFixer\Config::create()
-    ->setRules([
+    ->setRules(array(
         '@Symfony' => true,
-        'header_comment' => array('header' => $header),
         'simplified_null_return' => false,
         'phpdoc_no_empty_return' => false,
-        'phpdoc_to_comment' => false,
-        'print_to_echo' => false,
-    ])
+        'no_mixed_echo_print' => ['use' => 'print'],
+        'header_comment' => ['header' => $header],
+    ))
     ->setUsingCache(false)
-    ->finder(
-        PhpCsFixer\Finder::create()
-            ->in('src')
-    )
+    ->setFinder($finder)
 ;
