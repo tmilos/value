@@ -1,5 +1,7 @@
 {
     "name": "tmilos/value",
+    "description": "Abstract value and enum objects",
+    "keywords": ["abstract value object", "enum"],
     "license": "MIT",
     "type": "library",
     "authors": [
