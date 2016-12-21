@@ -6,6 +6,7 @@ Abstract value and enum objects
 [![Build Status](https://travis-ci.org/tmilos/value.svg?branch=master)](https://travis-ci.org/tmilos/value)
 [![Coverage Status](https://coveralls.io/repos/github/tmilos/value/badge.svg?branch=master)](https://coveralls.io/github/tmilos/value?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tmilos/value/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tmilos/value/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/3fa65c24-d210-4329-b9f4-ea225dea6939/small.png)](https://insight.sensiolabs.com/projects/3fa65c24-d210-4329-b9f4-ea225dea6939)
 
 ## Value objects
 
