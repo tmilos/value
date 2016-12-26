@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the tmilos/value package.
+ *
+ * (c) Milos Tomic <tmilos@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Tmilos\Value\Spec;
 
 use Tmilos\Value\AbstractValue;
@@ -19,7 +28,7 @@ class FixedLengthRandomStringValue extends AbstractValue
      */
     public static function generate()
     {
-        return new static(bin2hex(random_bytes(static::getRequiredLength()/2)));
+        return new static(bin2hex(random_bytes(static::getRequiredLength() / 2)));
     }
 
     public static function isValid($value)

@@ -5,7 +5,7 @@ $finder = PhpCsFixer\Finder::create()
 ;
 
 $header = <<<EOT
-This file is part of the tmilos-value package.
+This file is part of the tmilos/value package.
 
 (c) Milos Tomic <tmilos@gmail.com>
 
